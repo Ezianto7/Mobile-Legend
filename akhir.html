@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MOBILE LEGEND</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+/* Reset dan dasar styling */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to bottom right, #0f0f1a, #181828, #0f0f1a);
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    header {
+        background: linear-gradient(90deg, #5e60ce, #6930c3, #7400b8);
+        color: white;
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    nav {
+        background: #222233;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    nav .nav-link {
+        color: #ffcc29;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+        color: #ffffff;
+        text-shadow: 0 0 10px #ffffff;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .col {
+        background: linear-gradient(to top, #282838, #3e3e55);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        transition: all 0.4s ease;
+        text-align: center;
+    }
+    #column1 {
+    text-align: justify; /* Merapikan teks agar rata kanan-kiri */
+    line-height: 1.6; /* Memberikan jarak antar baris */
+    padding: 15px; /* Memberikan ruang di dalam kolom */
+    font-size: 1.1rem; /* Menyesuaikan ukuran teks agar lebih mudah dibaca */
+    background: linear-gradient(to top, #29293b, #1e1e2f);
+    border-radius: 15px;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    #column1 img {
+    display: block; /* Membuat gambar menjadi elemen block */
+    margin: 20px auto; /* Menempatkan gambar di tengah kolom */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    #column2 p {
+        font-size: 1rem; /* Mengatur ukuran teks lebih kecil */
+        line-height: 1.5;  /* Menyesuaikan jarak antar baris */
+        text-align: justify; /* Menambahkan keselarasan teks */
+    }
+    .col:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    }
+    .col h5 {
+        color: #ffcc29;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    .col p {
+        color: #cccccc;
+        line-height: 1.6;
+    }
+    .footer {
+        background: #222233;
+        color: #e0e0e0;
+        text-align: center;
+        padding: 20px;
+        font-size: 1rem;
+        margin-top: 20px;
+        border-top: 2px solid #ffcc29;
+    }
+    .footer a {
+        color: #ffcc29;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .footer a:hover {
+        color: #ffffff;
+        text-shadow: 0 0 10px #ffcc29;
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    }
+</style>
+        <script>
+            function updateColumnContent(menu, shape) {
+                const column = document.getElementById('column1');
+                if (menu === 'Hero') {
+                    if (shape === 'Terizla') {
+                        column.innerHTML = `
+                            <p><h3>Terizla</h3>Terizla adalah karakter hero dalam Mobile Legends yang memiliki latar belakang tragis. Sebelum menjadi monster yang ganas, dan suka menyerang, Terizla adalah seorang pandai besi terkenal dan pemimpin dari sebuah kota kecil. 
+                                Dia dikenal sebagai pejuang yang tangguh dan berani. Namun, kehidupan Terizla berubah drastis ketika kerajaannya merasa terancam oleh kekuatannya dan memutuskan untuk mengkhianatinya. 
+                                Terizla ditangkap, dipenjara, dan disiksa tanpa ampun, menyebabkan dia hampir mati.</p>
+                            <button class="btn btn-primary" onclick="toggleAdditionalContent('Fighter')">Selengkapnya</button>
+                            <div id="Fighter" class="additional-content">
+                            <p>Saat di ambang kematian, Terizla menerima tawaran kekuatan gelap yang memberinya kekuatan luar biasa, tetapi mengubahnya menjadi sosok yang menakutkan.Dengan palu besar yang ia ciptakan sendiri, Terizla kembali untuk membalas dendam. Dipenuhi dengan amarah dan dendam, dia bertekad menghancurkan kerajaan yang telah mengkhianatinya.Kini, sebagai salah satu hero di Mobile Legends, Terizla dikenal sebagai pejuang dengan serangan brutal dan kemampuan untuk mengendalikan medan pertempuran dengan kekuatan palunya.<p>
+                            </div>
+                        `;
+                    } if (shape === 'Clint') {
+                        column.innerHTML = `
+                            <p><h3>Clint</h3>Clint di Mobile Legends adalah salah satu marksman yang paling susah dimainkan. Padahal jagoan yang bergaya koboi dan bersenjatakan dua senjata ini cukup sakit bila build-nya sudah jadi. Hero ini bisa membunuh lawan dengan jurus-jurusnya saat late game. Clint merupakan koboi yang lahir di Westlands. Di tempat itu hampir semua orang mengakui keadilan, sehingga tidak ada tindak kriminal. Keamanannya pun terjamin dengan Clint menjadi yang hadir sebagai hero atau pahlawan di daerah tersebut.</p>
+                            <button class="btn btn-primary" onclick="toggleAdditionalContent('Fighter')">Selengkapnya</button>
+                            <div id="Fighter" class="additional-content">
+                            <p>Saat menumpas kejahatan yang ada, Clint mengandalkan sebuah pistol dan satu senjata laras panjang. Keahliannya dalam memegang dua senjata api tersebut tidak perlu diragukan lagi. Hal ini karena setiap peluru yang dimuntahkan pasti mengenai target yang diinginkan.Kelihaiannya dalam menggunakan senjata api membuat Clint sangat ditakuti oleh para penjahat. Pasalnya, setiap ada pelaku kejahatan yang berusaha mengacaukan Westlands pasti mati ditangan Clint. Kabar tentang keahlian Clint ini pun tersebar luas dan membuat para penjahat menjauhinya.Kemampuan Clint dalam menumpas kejahatan membuatnya digandrungi oleh warga Westlands. Begitu juga dengan koboi ini, ia pun dengan senang hati menjaga penduduk agar tidak terancam bahaya. Oleh sebab itu, daerah tersebut bisa menjadi damai dan penuh keadilan.<p>
+                            </div>
+                        `;
+                    } if (shape === 'Lunox') {
+                        column.innerHTML = `
+                             <p><h3>Lunox</h3>Suatu hari di Land of Dawn, terjadi suatu pertempuran yang besar antara ahli penyihir, kemudian sebuah Twilight Orb kuno menyerap semua energi sihir para Mage dalam pertempuran tersebut.Sebelumnya Twilight Orb ini tersegel namun ketika pertarungan berlangsung, segelnya terbuka dan menyerap semua energi di dekatnya.</p>
+                            <button class="btn btn-primary" onclick="toggleAdditionalContent('Fighter')">Selengkapnya</button>
+                            <div id="Fighter" class="additional-content">
+                            <p>Saat Twilight Orb terbuka, ada seorang gadis yang melangkah keluar, dari Twilight Orb muncul sebuah kekuatan yang sangat besar dan bertabrakan, yakni Chaos dan ORder.Gadis misterius yang muncul dari sebuah Twilight Orb yang tersegel tersebut adalah Lunox.Twilight Orb lahir didalam Twilight Orb kuno yang tersegel di dalam Ancient Lake. Namun dengan kekuatan yang dimilikinya, Lunox bisa menciptakan sebuah ilusi mimpi, dan didalamnya Lunox bisa mengatur apapun yang ia mau.Kemudian Lunox memasukan semua yang ada dalam kekuatan isolasi miliknya, memang sejak dulu, kekuatan Chaos dan Order Lunox ini saling bertarung satu sama lain.Keduanya memiliki kekuatan yang berbeda dan menyebabkan dunia jatuh pada keputusasaan. Semua makhluk yang ada mendapatkan imbas dari pertikaian kedua kekuatan ini.Namun hanya Lunox lah yang mampu meleraikan keduanya. Pada suatu hari, terdapat suatu bisikan misterius pada Lunox. Bisikan itu menyruh Lunox untuk meyeimbangkan dua kekuatan ini dalam mimpinya.Lunox kemudian menyadari bahwa untuk melakukan hal ini, harus adanya pengorbanan yang sangat besar. Namun untuk menjaga keseimbangan, Lunox akhirnya menggunakan mimpinya untuk menyeimbangkan Chaos dan ORder.<p>
+                            </div>
+                        `;
+                    } if (shape === 'Franco') {
+                        column.innerHTML = `
+                           <p><h3>Franco</h3>Franco adalah satu-satunya prajurit di Lautan Beku yang dapat memimpin orang-orang dalam pertempuran melawan Bane. Dalam satu pertempuran, Franco melihat tipu daya Bane dan akhirnya mengalahkannya. Kehidupan kembali hidup di Lembah Utara di bawah kepemimpinannya.</p>
+                            <button class="btn btn-primary" onclick="toggleAdditionalContent('Fighter')">Selengkapnya</button>
+                            <div id="Fighter" class="additional-content">
+                            <p>Karena rasa hormat atas prestasi gemilang Franco, orang-orang di Lembah Utara memberinya gelar Prajurit Beku. Namun, bagi Franco, semua yang telah dilakukannya sejauh ini masih belum layak mendapatkan pujian seperti itu. Tidak lama kemudian, Franco mengetahui bahwa Bane tidak hanya tidak binasa, tetapi telah memperoleh kekuatan baru, dan sedang mengumpulkan anak buahnya untuk kembali.<p>
+                            </div>
+                        `;
+                        } if (shape === 'Rafaela') {
+                        column.innerHTML = `
+                           <p><h3>Rafaela</h3>afaela adalah salah satu hero support di Mobile Legends yang memiliki kemampuan spesialis healing. Rafaela juga dapat memberikan stun melalui skill serangan milik nya, selain itu dia juga bisa memberikan efek healing sekaligus menambahkan movement speed hero rekan se tim nya dari skill yang dimiliki nya. Rafaela saat ini menjadi hero support yang jarang digunakan dan sudah lama sekali tidak masuk ke dalam meta Mobile Legends.</p>
+                            <button class="btn btn-primary" onclick="toggleAdditionalContent('Fighter')">Selengkapnya</button>
+                            <div id="Fighter" class="additional-content">
+                            <p>Namun jangan salah sangka karena hero ini masih cukup layak digunakan sebagai support meningat skill yang dimiliki nya cukup baik dalam memberikan cover. <p>
+                            </div>
+                        `;
+                         } if (shape === 'Benedetta') {
+                        column.innerHTML = `
+                           <p><h3>Benedetta</h3>Benedetta merupakan salah satu hero assasin yang beberapa dekade ini sangat meta. Ternyata, Benedetta memiliki cerita yang sangat menarik.Di Mobile Legends, Benedetta sendiri memiliki kemampuan berpedang yang sangat hebat dengan pedang bernama Alecto miliknya ia bisa mengalahkan semua lawan dengan sangat mudah dan cepat.</p>
+                            <button class="btn btn-primary" onclick="toggleAdditionalContent('Fighter')">Selengkapnya</button>
+                            <div id="Fighter" class="additional-content">
+                            <p>Ternyata, ia memiliki kisah yang cukup suram dan menarik, mulai dari asal-usul negara Benedetta hingga dimana ia mendapatkan pedang dan kekuatannya. Hingga di akhir cerita, Benedetta mendapatkan julukan sebagai pahlawan. Namun bukan di negeri asalnya.Kisah Benedetta sendiri sangat menegangkan, dari perjalan ia kecil hingga menjadi seseorang yang sangat kuat dan diandalkan para pejuan lain untuk mengalahkan para iblis.<p>
+                            </div>
+                        `;
+                    }
+                } else if (menu === 'Gambar') {
+                    if (shape === 'Terizla') {
+                        column.innerHTML = '<div class="image-container"><img src="Terizla.jpg" alt="gambar Terizla"style="width:500px;height:350px;"></div>';
+                    } else if (shape === 'Clint') {
+                        column.innerHTML = '<div class="image-container"><img src="Clint.jpg" alt="gambar Clint"style="width:500px;height:350px;"></div>';
+                    } else if (shape === 'Lunox') {
+                        column.innerHTML = '<div class="image-container"><img src="Lunox.jpg" alt="gambar Lunox"style="width:500px;height:350px;"></div>';
+                    } else if (shape === 'Franco') {
+                        column.innerHTML = '<div class="image-container"><img src="Franco.jpg" alt="gambar Franco"style="width:500px;height:350px;"></div>';
+                    } else if (shape === 'Rafaela') {
+                        column.innerHTML = '<div class="image-container"><img src="Rafaela.jpg" alt="gambar Rafaela"style="width:500px;height:350px;"></div>';
+                    } else if (shape === 'Benedetta') {
+                        column.innerHTML = '<div class="image-container"><img src="Benedetta.jpg" alt="gambar Benedetta"style="width:500px;height:350px;"></div>';
+                    }
+                }
+            }
+    
+            function toggleAdditionalContent(id) {
+                const content = document.getElementById(id);
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+    
+        <header>MOBILE LEGEND</header>
+    
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Terizla
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Hero', 'Terizla')">Hero</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Gambar', 'Terizla')">Gambar</button></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Clint
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Hero', 'Clint')">Hero</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Gambar', 'Clint')">Gambar</button></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lunox
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Hero', 'Lunox')">Hero</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Gambar', 'Lunox')">Gambar</button></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Franco
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Hero', 'Franco')">Hero</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Gambar', 'Franco')">Gambar</button></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Rafaela
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Hero', 'Rafaela')">Hero</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Gambar', 'Rafaela')">Gambar</button></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Benedetta
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Hero', 'Benedetta')">Hero</button></li>
+                                <li><button class="dropdown-item" type="button" onclick="updateColumnContent('Gambar', 'Benedetta')">Gambar</button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col" id="column2">
+                <h5>Role-Role di Mobile Legend</h5>
+                <div id="contentColumn2">
+                    <p><strong>Fighter:</strong> Hero yang berperan dalam role ini memiliki keseimbangan yang baik antara bertahan dan menyerang.</p>
+                    <p><strong>Marksman:</strong> Dengan damage besar dan attack speed tinggi, role ini memegang peranan yang sangat penting dalam situasi team fight.</p>
+                    <p><strong>Mage:</strong> Skill dengan magic damage yang besar menjadi bekal yang sangat penting bagi role mage pada early game sampai mid game.</p>
+                    <p><strong>Tank:</strong> Role selanjutnya adalah tank yang perannya hampir sama dengan support, yaitu melindungi rekan setim dari serangan hero lawan.</p>
+                    <p><strong>Support:</strong> Role selanjutnya adalah support, role yang sering dipandang sebelah mata, tapi memiliki peran vital saat team fight.</p>
+                    <p><strong>Assasin:</strong>Mobilitas yang tinggi dan damage yang besar menjadi skill utama assassin untuk membunuh dengan cepat.</p>
+                </div>
+            </div>            
+            <div class="col" id="column1">
+                Pilih menu untuk melihat lebih detail.
+                <img src="ml.jpg"style="width: 400px;height: 320px;">
+            </div>
+            <div class="col" id="column3">
+                <h5>Video Terkait Mobile Legends</h5>
+                <p>Berikut adalah video tentang Mobile Legends yang menarik:</p>
+                <div class="video-container">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/wVPSxBQv0mk?si=mis4M_lNbkDmy7--" 
+                        title="Video Terkait Mobile Legends" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen 
+                        style="border-radius: 15px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);">
+                    </iframe>
+                </div>
+            </div>            
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Mobile Legend Fanpage. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
